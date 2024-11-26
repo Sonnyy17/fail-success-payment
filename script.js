@@ -7,7 +7,8 @@ $(document).ready(function () {
 
         // Lấy userId từ URL
         const currentUrl = window.location.href; // URL hiện tại
-        const userId = currentUrl.split('/').pop(); // Lấy phần cuối cùng của URL làm userId
+        //const userId = currentUrl.split('/').pop(); // Lấy phần cuối cùng của URL làm userId
+        const userId = urlParams.get('userId');
 
         // Kiểm tra userId hợp lệ
         if (!userId || isNaN(userId)) {
