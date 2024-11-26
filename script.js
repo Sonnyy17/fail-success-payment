@@ -16,8 +16,10 @@ $(document).ready(function () {
         messageContainer.append('<div class="text processing">Processing your feedback...</div>');
 
         try {
-            // Gửi yêu cầu POST tới API (truyền userId dưới dạng query parameter)
-            const response = await fetch(`https://localhost:7296/api/payment/confirm?userId=${userId}`, {
+            // Gửi yêu cầu POST tới API (truyền userId dưới dạng query parameter)   
+
+            //const response = await fetch(`https://localhost:7296/api/payment/confirm?userId=${userId}`, {
+            const response = await fetch(`https://xungxinh.azurewebsites.net/api/payment/confirm?userId=${userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
