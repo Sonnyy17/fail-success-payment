@@ -44,18 +44,105 @@ body {
     font-weight: 300;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+.text {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #fff; /* White color for regular text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to make text more readable */
+}   
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.text {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.success-message {
+    font-size: 36px;
+    font-weight: bold;
+    color: green; /* Màu xanh cho chữ */
+    text-transform: uppercase;
+}
+
+.checkmark {
+    font-size: 48px;
+    color: green;
+    margin-right: 10px;
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    display: none;
+    /* Các hiệu ứng pháo bông có thể thêm bằng Javascript */
+}
+
 .feedback-button {
-    font-size: 1.5rem;
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ff5555;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 .feedback-button:hover {
-    background-color: #ff2222;
+    background-color: #45a049;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
