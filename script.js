@@ -7,7 +7,7 @@ $(document).ready(function () {
         const userId = new URLSearchParams(window.location.search).get('userId'); // Lấy userId từ query parameter
 
         // Kiểm tra userId hợp lệ
-        if (!userId || isNaN(userId)) {
+        if (!userId) {
             messageContainer.append('<div class="text error">Invalid userId in URL.</div>');
             return;
         }
