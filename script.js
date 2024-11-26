@@ -3,12 +3,11 @@ $(document).ready(function () {
         const messageContainer = $('#countUp'); // Vùng chứa thông báo
 
         // Lấy userId từ URL
-        const currentUrl = window.location.href; // URL hiện tại
-        const urlParams = new URLSearchParams(window.location.search); // Khai báo URLSearchParams
-        const userId = urlParams.get('userId');  // Lấy userId từ query string
+        const currentUrl = window.location.href;
+        const userId = new URLSearchParams(window.location.search).get('userId'); // Lấy userId từ query parameter
 
         // Kiểm tra userId hợp lệ
-        if (!userId) {
+        if (!userId || isNaN(userId)) {
             messageContainer.append('<div class="text error">Invalid userId in URL.</div>');
             return;
         }
@@ -17,13 +16,12 @@ $(document).ready(function () {
         messageContainer.append('<div class="text processing">Processing your feedback...</div>');
 
         try {
-            // Gửi yêu cầu POST tới API
-            const response = await fetch('https://localhost:7296/api/payment/confirm', {
+            // Gửi yêu cầu POST tới API (truyền userId dưới dạng query parameter)
+            const response = await fetch(`https://localhost:7296/api/payment/confirm?userId=${userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ userID: userId }), // Gửi userId lấy từ URL
             });
 
             // Xử lý phản hồi từ API
