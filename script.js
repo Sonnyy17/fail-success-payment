@@ -5,6 +5,7 @@ $(document).ready(function () {
         // Lấy userId từ URL
         const currentUrl = window.location.href;
         const userId = new URLSearchParams(window.location.search).get('userId'); // Lấy userId từ query parameter
+        const orderCode = new URLSearchParams(window.location.search).get('orderCode'); // Lấy userId từ query parameter
 
         // Kiểm tra userId hợp lệ
         if (!userId) {
@@ -18,7 +19,7 @@ $(document).ready(function () {
         try {
             // Gửi yêu cầu POST tới API (truyền userId dưới dạng query parameter)   
 
-            const response = await fetch(`https://localhost:7296/api/payment/confirm?userId=${userId}`, {
+            const response = await fetch(`https://localhost:7296/api/payment/confirm?userId=${userId}&orderCode=${orderCode}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
