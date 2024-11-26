@@ -8,7 +8,7 @@ $(document).ready(function () {
         const userId = urlParams.get('userId');  // Lấy userId từ query string
 
         // Kiểm tra userId hợp lệ
-        if (!userId || isNaN(userId)) {
+        if (!userId) {
             messageContainer.append('<div class="text error">Invalid userId in URL.</div>');
             return;
         }
