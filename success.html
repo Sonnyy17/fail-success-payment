@@ -27,30 +27,5 @@
 
 
 
-<script>
-    document.getElementById('feedbackButton').addEventListener('click', function () {
-        // User ID giả định, bạn có thể thay bằng giá trị thực tế
-        const userID = 123;
 
-        // Gọi API
-        fetch('https://xungxinh.azurewebsites.net/api/payment/create-payment-link', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ userID: userID })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('API called successfully');
-            } else {
-                console.error('API call failed');
-            }
-        })
-        .catch(error => console.error('Error:', error));
-
-        // Chuyển hướng đến Google Form
-        window.location.href = 'https://forms.gle/example-form-link'; // Thay bằng link Google Form thực tế
-    });
-</script>
 
