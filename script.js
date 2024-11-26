@@ -37,7 +37,7 @@ $(document).ready(function () {
 
                 // Chuyển hướng sau 2 giây
                 setTimeout(() => {
-                    window.location.href = 'https://forms.gle/example-form-link'; // Link thật
+                    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfjYf5UJeZi2QLt8mJr8AdbR3X03p-yizBVl2WHqx-Oz79vWw/viewform?usp=sf_link'; // Link thật
                 }, 2000);
             } else {
                 const error = await response.json();
