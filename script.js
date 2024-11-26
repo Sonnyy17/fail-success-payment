@@ -1,14 +1,11 @@
-//'https://localhost:7296/api/payment/confirm'
-
-
 $(document).ready(function () {
     $('#feedbackButton').on('click', async function () {
         const messageContainer = $('#countUp'); // Vùng chứa thông báo
 
         // Lấy userId từ URL
         const currentUrl = window.location.href; // URL hiện tại
-        //const userId = currentUrl.split('/').pop(); // Lấy phần cuối cùng của URL làm userId
-        const userId = urlParams.get('userId');
+        const urlParams = new URLSearchParams(window.location.search); // Khai báo URLSearchParams
+        const userId = urlParams.get('userId');  // Lấy userId từ query string
 
         // Kiểm tra userId hợp lệ
         if (!userId || isNaN(userId)) {
@@ -51,5 +48,3 @@ $(document).ready(function () {
         }
     });
 });
-
-
