@@ -6,7 +6,8 @@ html, body {
 }
 
 body {
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/257418/andy-holmes-698828-unsplash.jpg');
+   /* background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/257418/andy-holmes-698828-unsplash.jpg');*/
+    background-image: url('./images/background.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -54,10 +55,10 @@ body {
 
 
 .text {
-    font-size: 22px;
+    font-size: 28px;
     margin: 10px 0;
-    color: #fff; /* White color for regular text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to make text more readable */
+    color: #3a4054; /* White color for regular text */
+   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  Add shadow to make text more readable */
 }   
 
 
