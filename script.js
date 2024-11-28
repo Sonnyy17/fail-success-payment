@@ -33,7 +33,7 @@ $(document).ready(function () {
             if (response.ok) {
                 const data = await response.json();
                 $('.processing').remove();
-                messageContainer.append('<div class="text success">Feedback submitted successfully!</div>');
+                messageContainer.append('<div class="text success">.......waiting.......</div>');
             } else {
                 const error = await response.json();
                 $('.processing').remove();
